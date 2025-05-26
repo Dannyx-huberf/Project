@@ -1,0 +1,310 @@
+.first-section {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(../asset/printer-nature-concept.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: .5rem 1rem;
+  transition: all 0.5s ease-in-out;
+  animation: smoothChange 15s infinite ease-in-out;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(var(--primary-color-rgb), 0.9);
+  padding: 1.5rem 3rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.header.scrolled {
+  background-color: rgba(var(--primary-color-rgb), 0.95);
+  padding: 1rem 3rem;
+}
+
+.header .logo {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-light);
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+.header .logo:hover {
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.nav-lists {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.lists-item {
+  position: relative;
+}
+
+.lists-item a {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.lists-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.lists-item:hover a {
+  color: var(--secondary-color);
+}
+
+.lists-item:hover a::before {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 0;
+  transform: translate(-50%, -5px);
+  font-size: 3rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.hamburger:hover {
+  color: var(--secondary-color);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0) translate(-50%, -5px);
+  }
+  
+}
+.dropdown-lists {
+  padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(var(--primary-color-rgb), 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-lists.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.dropdown-items a {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.dropdown-items a:hover {
+  color: var(--secondary-color);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.title {
+  text-align: center;
+  margin-top: 10rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.title .company-name {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cm-fname {
+  color: var(--secondary-color);
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+.title h1 {
+  font-size: 3.5rem;
+  color: var(--text-light);
+  margin: 1rem 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  font-weight: 700;
+}
+
+.cm-quote {
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  max-width: 600px;
+  color: rgba(255,255,255,0.9);
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+}
+
+.view-btn {
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.view-btn:hover {
+  background-color: var(--secondary-color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Keyframes */
+@keyframes smoothChange {
+  0%, 100% {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(../asset/printer-nature-concept.jpg);
+  }
+  33.33% {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(../asset/home-printer-based-toner.jpg);
+  }
+  66.66% {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(../asset/working-offset-printer.jpg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-lists {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .dropdown-lists a{
+  color: orangered;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+  
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .cm-quote {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .header .logo {
+    font-size: 1.8rem;
+  }
+  
+  .title h1 {
+    font-size: 2rem;
+  }
+  
+  .company-name {
+    font-size: 1rem;
+  }
+  
+  .view-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
