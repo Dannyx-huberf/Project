@@ -77,7 +77,7 @@
 }
 
 .our-values {
-  padding: 6rem 0;
+  padding: 6rem 1.5rem;
   background-color: var(--light-color);
 }
 
@@ -261,7 +261,7 @@
   content: '';
   position: absolute;
   width: 4px;
-  background-color: var(--secondary-color);
+  background-color: orangered;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -285,7 +285,7 @@
 }
 
 .timeline-year {
-  background-color: var(--secondary-color);
+  background-color: orangered;
   color: white;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -409,7 +409,8 @@
   .our-team,
   .milestones,
   .about-cta {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
+    margin: 0 1rem;
   }
   
   .cta-buttons {
@@ -438,7 +439,7 @@
   .our-team,
   .milestones,
   .about-cta {
-    padding: 3rem 0;
+    padding: 3rem .5rem;
   }
   
   .team-grid {
